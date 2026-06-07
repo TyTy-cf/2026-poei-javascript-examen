@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Examen - Javascript - Exo 4</title>
+        <script src="script/exo_4.js"></script>
+        <link href="./styles/main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="container my-5">
+            <h1>Onglets dynamique (Tabs)</h1>
+            <ul>
+                <li>Objectif : Créer une navigation par onglets où le clic sur un titre affiche le contenu correspondant et masque les autres. L'exercice est basé sur l'HTML de Bootstrap, MAIS le code JS de Bootstrap n'est pas importé volontairement. Vous devez faire fonctionner les tab-pan par votre propre code JS.</li>
+                <li>Consignes :</li>
+                <li class="ms-3">Un clic su le bouton "First Tab" doit afficher le contenu de l'élément définit par le selecteur présent dans l'attribut : "data-bs-target"</li>
+                <li class="ms-3">Pour que le bon élément s'affiche il faut ajouter les classes CSS "show" et "active" sur celui-ci</li>
+                <li class="ms-3">Il faudra retirer les classes CSS "show" et "active" des autres div, ayant la classe "tab-pane"</li>
+            </ul>
+
+            <section>
+                <h2>Tab pan</h2>
+                <ul class="nav nav-tabs" id="exoTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="first-tab" data-bs-toggle="tab" data-bs-target="#first-tab-pane" type="button" role="tab" aria-controls="first-tab-pane" aria-selected="true">First tab</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="second-tab" data-bs-toggle="tab" data-bs-target="#second-tab-pane" type="button" role="tab" aria-controls="second-tab-pane" aria-selected="false">Second tab</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="third-tab" data-bs-toggle="tab" data-bs-target="#third-tab-pane" type="button" role="tab" aria-controls="third-tab-pane" aria-selected="false">Third tab</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="first-tab-pane" role="tabpanel" aria-labelledby="first-tab" tabindex="0">
+                        First tab content
+                    </div>
+                    <div class="tab-pane fade" id="second-tab-pane" role="tabpanel" aria-labelledby="second-tab" tabindex="0">
+                        Second tab content
+                    </div>
+                    <div class="tab-pane fade" id="third-tab-pane" role="tabpanel" aria-labelledby="third--tab" tabindex="0">
+                        Third tab content
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
