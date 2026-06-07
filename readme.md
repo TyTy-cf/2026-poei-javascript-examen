@@ -1,6 +1,9 @@
 # IPME POEI 2026 Javascript
 
 
+Une fois l'examen cloné, pensez à faire un `npm i` pour ajouter les dépendances.
+
+
 ## 1. Algorithmie
 
 
