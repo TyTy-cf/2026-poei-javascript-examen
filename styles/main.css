@@ -1,2 +1,25 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.light-mode {
+    background-color: lightgray;
+    color: white;
+}
+
+.btn-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 1rem;
+    gap: .5rem;
+}
+
+.active{
+
+}
