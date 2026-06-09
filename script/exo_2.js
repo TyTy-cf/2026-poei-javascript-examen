@@ -1,4 +1,4 @@
-const toggleDarkModeButton = document.querySelector("input.toggleDarkModeButton");
+const toggleDarkModeButton = document.querySelector("button.toggleDarkModeButton");
 let darkMode = false;
 
 toggleDarkModeButton.addEventListener("click", () => {
@@ -9,5 +9,5 @@ toggleDarkModeButton.addEventListener("click", () => {
 
     darkMode = !darkMode;
 
-    darkMode ? toggleDarkModeButton.value = "Mode clair" : toggleDarkModeButton.value = "Mode sombre"
+    darkMode ? toggleDarkModeButton.innerHTML = "Mode clair <i class=\"fa-solid fa-sun\" style=\"color: rgb(0, 0, 0);\"></i>" : toggleDarkModeButton.innerHTML = "Mode sombre <i class=\"fa-solid fa-moon\" style=\"color: rgb(0, 0, 0);\"></i>"
 });
