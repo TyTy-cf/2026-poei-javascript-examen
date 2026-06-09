@@ -69,7 +69,6 @@ function mergeArrays(arr1, arr2) {
     set.add(nbr1);
   }
 
-  console.log(set);
   for (const nbr of set) {
     result.push(nbr);
   }
@@ -79,6 +78,8 @@ function mergeArrays(arr1, arr2) {
       [result[j], result[j - 1]] = [result[j - 1], result[j]];
     }
   }
+
+  // [2, 8,  3, 1, 7, 4, 10 ]
 
   return result;
 }
