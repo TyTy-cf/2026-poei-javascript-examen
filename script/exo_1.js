@@ -57,3 +57,38 @@ function getBanknotes(amount) {
 
 // amount = 39;
 // console.log(getBanknotes(amount));
+
+function mergeArrays(arr1, arr2) {
+  const set = new Set();
+  let result = [];
+
+  for (const nbr2 of arr2) {
+    set.add(nbr2);
+  }
+  for (const nbr1 of arr1) {
+    set.add(nbr1);
+  }
+
+  console.log(set);
+  for (const nbr of set) {
+    result.push(nbr);
+  }
+
+  for (let i = 1; i < result.length; i++) {
+    for (let j = i; j && result[j - 1] > result[j]; j--) {
+      [result[j], result[j - 1]] = [result[j - 1], result[j]];
+    }
+  }
+
+  return result;
+}
+
+let arr1 = [1, 7, 4, 10];
+let arr2 = [2, 8, 3];
+console.log(mergeArrays(arr1, arr2));
+console.log("expected [1, 2, 3, 4, 7, 8, 10]");
+
+arr1 = [1, 7, 4, 3];
+arr2 = [1, 2, 8, 3];
+console.log(mergeArrays(arr1, arr2));
+console.log("expected [1, 2, 3, 4, 7, 8]");
